@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "test-error.component.scss"
+    ],
+    "names": [],
+    "file": "test-error.component.css"
+}

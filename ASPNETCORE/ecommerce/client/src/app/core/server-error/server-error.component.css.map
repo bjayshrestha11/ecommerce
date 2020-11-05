@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "server-error.component.scss"
+    ],
+    "names": [],
+    "file": "server-error.component.css"
+}
