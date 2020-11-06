@@ -4,22 +4,22 @@ namespace API.Dtos
 {
     public class AddressDto
     {
-        // [Required]
+        [Required]
         public string FirstName { get; set; }
 
-        // [Required]
+        [Required]
         public string LastName { get; set; }
 
-        // [Required]
+        [Required]
         public string Street { get; set; }
 
-        // [Required]
+        [Required]
         public string City { get; set; }
 
-        // [Required]
+        [Required]
         public string State { get; set; }
 
-        // [Required]
+        [Required]
         public string Zipcode { get; set; }
     }
 }
