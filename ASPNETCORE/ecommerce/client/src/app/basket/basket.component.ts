@@ -11,9 +11,11 @@ import { BasketService } from './basket.service';
 export class BasketComponent implements OnInit {
   basket$: Observable<IBasket>;
   basketTotals$: Observable<IBasketTotals>;
+
   constructor(private basketService: BasketService) { }
 
-  ngOnInit(): void {
+  // tslint:disable-next-line: typedef
+  ngOnInit() {
     this.basket$ = this.basketService.basket$;
     this.basketTotals$ = this.basketService.basketTotal$;
   }

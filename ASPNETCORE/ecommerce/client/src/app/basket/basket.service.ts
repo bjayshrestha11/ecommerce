@@ -1,10 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { Basket, IBasket, IBasketItem, IBasketTotals } from '../shared/models/basket';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
+import { IBasket, IBasketItem, Basket, IBasketTotals } from '../shared/models/basket';
+import { map } from 'rxjs/operators';
 import { IProduct } from '../shared/models/product';
+import { IDeliveryMethod } from '../shared/models/deliveryMethod';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,10 @@ export class BasketService {
   private basketTotalSource = new BehaviorSubject<IBasketTotals>(null);
   basketTotal$ = this.basketTotalSource.asObservable();
   shipping = 0;
+
   constructor(private http: HttpClient) { }
 
+  // tslint:disable-next-line: typedef
   // createPaymentIntent() {
   //   return this.http.post(this.baseUrl + 'payments/' + this.getCurrentBasketValue().id, {})
   //     .pipe(
@@ -27,14 +30,15 @@ export class BasketService {
   //     );
   // }
 
-  // setShippingPrice(deliveryMethod: IDeliveryMethod) {
-  //   this.shipping = deliveryMethod.price;
-  //   const basket = this.getCurrentBasketValue();
-  //   basket.deliveryMethodId = deliveryMethod.id;
-  //   basket.shippingPrice = deliveryMethod.price;
-  //   this.calculateTotals();
-  //   this.setBasket(basket);
-  // }
+  // tslint:disable-next-line: typedef
+  setShippingPrice(deliveryMethod: IDeliveryMethod) {
+    this.shipping = deliveryMethod.price;
+    const basket = this.getCurrentBasketValue();
+    basket.deliveryMethodId = deliveryMethod.id;
+    basket.shippingPrice = deliveryMethod.price;
+    this.calculateTotals();
+    this.setBasket(basket);
+  }
 
   // tslint:disable-next-line: typedef
   getBasket(id: string) {
@@ -162,5 +166,4 @@ export class BasketService {
       type: item.productType
     };
   }
-
 }
