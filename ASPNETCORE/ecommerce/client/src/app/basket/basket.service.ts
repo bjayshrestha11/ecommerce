@@ -21,14 +21,14 @@ export class BasketService {
   constructor(private http: HttpClient) { }
 
   // tslint:disable-next-line: typedef
-  // createPaymentIntent() {
-  //   return this.http.post(this.baseUrl + 'payments/' + this.getCurrentBasketValue().id, {})
-  //     .pipe(
-  //       map((basket: IBasket) => {
-  //         this.basketSource.next(basket);
-  //       })
-  //     );
-  // }
+  createPaymentIntent() {
+    return this.http.post(this.baseUrl + 'payments/' + this.getCurrentBasketValue().id, {})
+      .pipe(
+        map((basket: IBasket) => {
+          this.basketSource.next(basket);
+        })
+      );
+  }
 
   // tslint:disable-next-line: typedef
   setShippingPrice(deliveryMethod: IDeliveryMethod) {

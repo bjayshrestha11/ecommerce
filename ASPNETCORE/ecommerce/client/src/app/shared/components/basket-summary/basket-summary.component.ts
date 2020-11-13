@@ -19,17 +19,22 @@ export class BasketSummaryComponent implements OnInit {
 
   constructor() { }
 
+  // tslint:disable-next-line: typedef
+  // tslint:disable-next-line: typedef
   ngOnInit() {
   }
 
+  // tslint:disable-next-line: typedef
   decrementItemQuantity(item: IBasketItem) {
     this.decrement.emit(item);
   }
 
+  // tslint:disable-next-line: typedef
   incrementItemQuantity(item: IBasketItem) {
     this.increment.emit(item);
   }
 
+  // tslint:disable-next-line: typedef
   removeBasketItem(item: IBasketItem) {
     this.remove.emit(item);
   }
