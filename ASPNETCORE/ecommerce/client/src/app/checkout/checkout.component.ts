@@ -16,7 +16,6 @@ export class CheckoutComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private accountService: AccountService, private basketService: BasketService) { }
 
-  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.createCheckoutForm();
     this.getAddressFormValues();
@@ -24,7 +23,6 @@ export class CheckoutComponent implements OnInit {
     this.basketTotals$ = this.basketService.basketTotal$;
   }
 
-  // tslint:disable-next-line: typedef
   createCheckoutForm() {
     this.checkoutForm = this.fb.group({
       addressForm: this.fb.group({
@@ -44,7 +42,6 @@ export class CheckoutComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line: typedef
   getAddressFormValues() {
     this.accountService.getUserAddress().subscribe(address => {
       if (address) {
@@ -55,7 +52,6 @@ export class CheckoutComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line: typedef
   getDeliveryMethodValue() {
     const basket = this.basketService.getCurrentBasketValue();
     if (basket.deliveryMethodId !== null) {

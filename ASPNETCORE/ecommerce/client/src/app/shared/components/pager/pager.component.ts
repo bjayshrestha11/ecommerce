@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-pager',
@@ -6,7 +6,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./pager.component.scss']
 })
 export class PagerComponent implements OnInit {
-
   @Input() totalCount: number;
   @Input() pageSize: number;
   @Input() pageNumber: number;
@@ -14,12 +13,11 @@ export class PagerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  // tslint:disable-next-line: typedef
-  onPagerChange(event: any){
-    this.pageChanged.emit(event);
+  onPagerChange(event: any) {
+    this.pageChanged.emit(event.page);
   }
 
 }

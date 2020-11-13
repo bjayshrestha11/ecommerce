@@ -36,10 +36,8 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
     private toastr: ToastrService,
     private router: Router) { }
 
-
-  // tslint:disable-next-line: typedef
   ngAfterViewInit() {
-    this.stripe = Stripe('pk_test_51HmcMfERKf1Ht4CXHt7zRcMq7EBIJ2Z84dsb1cssjf8OZJcyvLKTNbGyJ2IP0ROOR9M1tAMhk3lipvq3kv7HK5dQ00PAws8nGs');
+    this.stripe = Stripe('pk_test_2PZ84pFKu2MddUgGDG521v9m00SlLWySIR');
     const elements = this.stripe.elements();
 
     this.cardNumber = elements.create('cardNumber');
@@ -55,15 +53,12 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
     this.cardCvc.addEventListener('change', this.cardHandler);
   }
 
-  // tslint:disable-next-line: typedef
   ngOnDestroy() {
     this.cardNumber.destroy();
     this.cardExpiry.destroy();
     this.cardCvc.destroy();
   }
 
-
-  // tslint:disable-next-line: typedef
   onChange(event) {
     if (event.error) {
       this.cardErrors = event.error.message;
@@ -83,7 +78,6 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  // tslint:disable-next-line: typedef
   async submitOrder() {
     this.loading = true;
     const basket = this.basketService.getCurrentBasketValue();
@@ -105,9 +99,6 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-
-
-  // tslint:disable-next-line: typedef
   private async confirmPaymentWithStripe(basket) {
     return this.stripe.confirmCardPayment(basket.clientSecret, {
       payment_method: {
@@ -119,13 +110,11 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  // tslint:disable-next-line: typedef
   private async createOrder(basket: IBasket) {
     const orderToCreate = this.getOrderToCreate(basket);
     return this.checkoutService.creatOrder(orderToCreate).toPromise();
   }
 
-  // tslint:disable-next-line: typedef
   private getOrderToCreate(basket: IBasket) {
     return {
       basketId: basket.id,

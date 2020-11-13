@@ -13,12 +13,10 @@ export class CheckoutService {
 
   constructor(private http: HttpClient) { }
 
-  // tslint:disable-next-line: typedef
   creatOrder(order: IOrderToCreate) {
     return this.http.post(this.baseUrl + 'orders', order);
   }
 
-  // tslint:disable-next-line: typedef
   getDeliveryMethods() {
     return this.http.get(this.baseUrl + 'orders/deliveryMethods').pipe(
       map((dm: IDeliveryMethod[]) => {

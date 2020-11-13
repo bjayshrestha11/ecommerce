@@ -21,7 +21,6 @@ export class ShopService {
 
   constructor(private http: HttpClient) { }
 
-  // tslint:disable-next-line: typedef
   getProducts(useCache: boolean) {
     if (useCache === false) {
       this.products = [];
@@ -67,17 +66,14 @@ export class ShopService {
       );
   }
 
-  // tslint:disable-next-line: typedef
   getShopParams() {
     return this.shopParams;
   }
 
-  // tslint:disable-next-line: typedef
   setShopParams(params: ShopParams) {
     this.shopParams = params;
   }
 
-  // tslint:disable-next-line: typedef
   getProduct(id: number) {
     const product = this.products.find(p => p.id === id);
 
@@ -88,7 +84,6 @@ export class ShopService {
     return this.http.get<IProduct>(this.baseUrl + 'products/' + id);
   }
 
-  // tslint:disable-next-line: typedef
   getBrands() {
     if (this.brands.length > 0) {
       return of(this.brands);
@@ -101,7 +96,6 @@ export class ShopService {
     );
   }
 
-  // tslint:disable-next-line: typedef
   getTypes() {
     if (this.types.length > 0) {
       return of(this.types);
