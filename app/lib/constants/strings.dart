@@ -14,6 +14,7 @@ const String CART_COLLECTION = "carts";
 const ORDERS_COLLECTION = "orders";
 const PRODUCTS_COLLECTION = "products";
 const CATEGORIES_COLLECTION = "categories";
+const BRANDS_COLLECTION = "brands";
 const CAROSLIDE_COLLECTION = "carouselSlider";
 
 //Order state

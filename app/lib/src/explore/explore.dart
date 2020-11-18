@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:app/components/appbar.dart';
-import 'package:app/constants/colors.dart';
-import 'package:app/constants/icons.dart';
-import 'package:app/src/explore/widgets/allCategories.dart';
-import 'package:app/src/explore/widgets/mySlider.dart';
-import 'package:app/src/explore/widgets/userCircle.dart';
-import 'package:app/src/explore/widgets/allProducts.dart';
+import '../../components/appbar.dart';
+import '../../constants/icons.dart';
+import 'widgets/allCategories.dart';
+import 'widgets/mySlider.dart';
+import 'widgets/userCircle.dart';
+import 'widgets/allProducts.dart';
 
 import '../../constants/colors.dart';
 

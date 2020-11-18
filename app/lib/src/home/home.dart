@@ -8,7 +8,7 @@ import 'package:app/sharedPrefs/preferences.dart';
 import 'package:app/src/cart/cart.dart';
 import 'package:app/src/explore/explore.dart';
 import 'package:app/src/orders/myOrders.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
   PageController _pageController;
   int _page = 0;
   String _userID;
-  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  // final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   getUserId() async {
     _userID = await Prefs.getuserId();
@@ -28,28 +28,28 @@ class _HomeState extends State<Home> {
 
   //List<Message> messagesList;
 
-  _configureFirebaseListeners() {
-    _firebaseMessaging.configure(
-      onMessage: (Map<String, dynamic> message) async {
-        print('onMessage: $message');
-        //_setMessage(message);
-        Navigator.of(context).pushNamed("/");
-      },
-      onLaunch: (Map<String, dynamic> message) async {
-        print('onLaunch: $message');
-        Navigator.of(context).pushNamed("/");
-        //_setMessage(message);
-      },
-      onResume: (Map<String, dynamic> message) async {
-        print('onResume: $message');
-        //_setMessage(message);
-        Navigator.of(context).pushNamed("/");
-      },
-    );
-    _firebaseMessaging.requestNotificationPermissions(
-      const IosNotificationSettings(sound: true, badge: true, alert: true),
-    );
-  }
+  // _configureFirebaseListeners() {
+  //   _firebaseMessaging.configure(
+  //     onMessage: (Map<String, dynamic> message) async {
+  //       print('onMessage: $message');
+  //       //_setMessage(message);
+  //       Navigator.of(context).pushNamed("/");
+  //     },
+  //     onLaunch: (Map<String, dynamic> message) async {
+  //       print('onLaunch: $message');
+  //       Navigator.of(context).pushNamed("/");
+  //       //_setMessage(message);
+  //     },
+  //     onResume: (Map<String, dynamic> message) async {
+  //       print('onResume: $message');
+  //       //_setMessage(message);
+  //       Navigator.of(context).pushNamed("/");
+  //     },
+  //   );
+  //   _firebaseMessaging.requestNotificationPermissions(
+  //     const IosNotificationSettings(sound: true, badge: true, alert: true),
+  //   );
+  // }
 
   /*_setMessage(Map<String, dynamic> message) {
     final notification = message['notification'];
@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
     _pageController = PageController();
     getUserId();
     super.initState();
-    _configureFirebaseListeners();
+    // _configureFirebaseListeners();
   }
 
   @override
@@ -109,7 +109,7 @@ class _HomeState extends State<Home> {
         backgroundColor: mainCol,
         currentIndex: _page,
         onTap: navigationTapped,
-        type: BottomNavigationBarType.shifting,
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: secondCol,
         unselectedItemColor: bgCol,
         items: [

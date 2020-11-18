@@ -1,3 +1,4 @@
+import 'package:app/models/brand.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app/constants/strings.dart';
 import 'package:app/models/caroSlide.dart';
@@ -165,12 +166,17 @@ DatabaseService<Order> orderItemDb = DatabaseService<Order>(ORDERS_COLLECTION,
 DatabaseService<Product> productItemDb = DatabaseService<Product>(
     PRODUCTS_COLLECTION,
     fromDS: (id, data) => Product.fromDS(id, data),
-    toMap: (order) => order.toMap());
+    toMap: (product) => product.toMap());
 
 DatabaseService<Category> categoryItemDb = DatabaseService<Category>(
     CATEGORIES_COLLECTION,
     fromDS: (id, data) => Category.fromDS(id, data),
-    toMap: (order) => order.toMap());
+    toMap: (category) => category.toMap());
+
+DatabaseService<Brand> brandItemDb = DatabaseService<Brand>(
+    BRANDS_COLLECTION,
+    fromDS: (id, data) => Brand.fromDS(id, data),
+    toMap: (brand) => brand.toMap());
 
 DatabaseService<CaroSlide> caroSlideItemDb = DatabaseService<CaroSlide>(
     CAROSLIDE_COLLECTION,

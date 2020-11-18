@@ -3,11 +3,11 @@
     <ProjectReference Include="..\Core\Core.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.9"/>
     <PackageReference Include="StackExchange.Redis" Version="2.1.58"/>
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8"/>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9"/>
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0"/>
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0"/>
     <PackageReference Include="Stripe.net" Version="39.23.0"/>
