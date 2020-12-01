@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
+import '../constants/colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget title;

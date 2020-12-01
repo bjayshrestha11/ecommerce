@@ -1,11 +1,12 @@
 import 'package:badges/badges.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/components/shimmering/myshimmer.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/constants/strings.dart';
-import 'package:foodly_dashboard/models/cartItem.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+
+import '../../../components/shimmering/myshimmer.dart';
+import '../../../constants/colors.dart';
+import '../../../constants/strings.dart';
+import '../../../models/cartItem.dart';
+import '../../../utilities/utils.dart';
 
 class DashCartItemTile extends StatelessWidget {
   final CartItem cartItem;

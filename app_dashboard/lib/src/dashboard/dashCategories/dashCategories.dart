@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/components/appbar.dart';
-import 'package:foodly_dashboard/components/quietBox.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/constants/icons.dart';
-import 'package:foodly_dashboard/models/category.dart';
-import 'package:foodly_dashboard/services/db_services.dart';
-import 'package:foodly_dashboard/src/dashboard/widget/dashCategoryTile.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+import 'package:app_dashboard/components/appbar.dart';
+import 'package:app_dashboard/components/quietBox.dart';
+import 'package:app_dashboard/constants/colors.dart';
+import 'package:app_dashboard/constants/icons.dart';
+import 'package:app_dashboard/models/category.dart';
+import 'package:app_dashboard/services/db_services.dart';
+import 'package:app_dashboard/src/dashboard/widget/dashCategoryTile.dart';
+import 'package:app_dashboard/utilities/utils.dart';
 
 class DashCategories extends StatelessWidget {
   @override

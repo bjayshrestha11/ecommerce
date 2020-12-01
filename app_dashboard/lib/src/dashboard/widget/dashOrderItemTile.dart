@@ -1,9 +1,9 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/components/cachedImage/cachedImage.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/models/order.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+import 'package:app_dashboard/components/cachedImage/cachedImage.dart';
+import 'package:app_dashboard/constants/colors.dart';
+import 'package:app_dashboard/models/order.dart';
+import 'package:app_dashboard/utilities/utils.dart';
 
 class DashOrderItemTile extends StatelessWidget {
   final OrderedItem orderedItem;

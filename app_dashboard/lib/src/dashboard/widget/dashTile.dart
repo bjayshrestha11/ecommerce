@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+import 'package:app_dashboard/constants/colors.dart';
+import 'package:app_dashboard/utilities/utils.dart';
 
 class DashTile extends StatelessWidget {
   final String routeName;
   final IconData icon;
   final String name;
-  DashTile({@required this.routeName, this.icon, this.name});
+  final Color color;
+  final Color bgCol;
+  DashTile({@required this.routeName, this.icon, this.name, this.color, this.bgCol});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -15,12 +17,12 @@ class DashTile extends StatelessWidget {
       },
       child: Card(
         elevation: 10,
-        shadowColor: secondCol,
+        shadowColor: Colors.grey,
         margin: EdgeInsets.all(5),
         child: Container(
           width: Utils.getWidthByPercentage(context, 40),
           height: Utils.getHeightByPercentage(context, 15),
-          color: mainCol,
+          color: color,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,

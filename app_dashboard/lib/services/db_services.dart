@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:foodly_dashboard/constants/strings.dart';
-import 'package:foodly_dashboard/models/cartItem.dart';
-import 'package:foodly_dashboard/models/category.dart';
-import 'package:foodly_dashboard/models/database_item.dart';
-import 'package:foodly_dashboard/models/order.dart';
-import 'package:foodly_dashboard/models/product.dart';
-import 'package:foodly_dashboard/models/totalSale.dart';
+
+import '../constants/strings.dart';
+import '../models/category.dart';
+import '../models/database_item.dart';
+import '../models/order.dart';
+import '../models/product.dart';
+import '../models/totalSale.dart';
+import '../models/cartItem.dart';
 
 class DatabaseService<T extends DatabaseItem> {
   final String collection;

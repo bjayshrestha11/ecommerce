@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+import '../utilities/utils.dart';
 
 class QuietBox extends StatelessWidget {
   final String imgPath;

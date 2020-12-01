@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/components/appbar.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/constants/icons.dart';
-import 'package:foodly_dashboard/constants/strings.dart';
-import 'package:foodly_dashboard/constants/styles.dart';
-import 'package:foodly_dashboard/models/order.dart';
-import 'package:foodly_dashboard/src/dashboard/widget/dashOrderItemTile.dart';
+import 'package:app_dashboard/components/appbar.dart';
+import 'package:app_dashboard/constants/colors.dart';
+import 'package:app_dashboard/constants/icons.dart';
+import 'package:app_dashboard/constants/strings.dart';
+import 'package:app_dashboard/constants/styles.dart';
+import 'package:app_dashboard/models/order.dart';
+import 'package:app_dashboard/src/dashboard/widget/dashOrderItemTile.dart';
 
 class OrderDetails extends StatelessWidget {
   final Order order;

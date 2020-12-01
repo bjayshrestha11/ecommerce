@@ -1,16 +1,16 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/components/appbar.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/constants/icons.dart';
-import 'package:foodly_dashboard/constants/styles.dart';
-import 'package:foodly_dashboard/models/category.dart';
-import 'package:foodly_dashboard/models/message.dart';
-import 'package:foodly_dashboard/models/product.dart';
-import 'package:foodly_dashboard/models/totalSale.dart';
-import 'package:foodly_dashboard/services/db_services.dart';
-import 'package:foodly_dashboard/src/dashboard/widget/dashTile.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+import 'package:app_dashboard/components/appbar.dart';
+import 'package:app_dashboard/constants/colors.dart';
+import 'package:app_dashboard/constants/icons.dart';
+import 'package:app_dashboard/constants/styles.dart';
+import 'package:app_dashboard/models/category.dart';
+import 'package:app_dashboard/models/message.dart';
+import 'package:app_dashboard/models/product.dart';
+import 'package:app_dashboard/models/totalSale.dart';
+import 'package:app_dashboard/services/db_services.dart';
+import 'package:app_dashboard/src/dashboard/widget/dashTile.dart';
+import 'package:app_dashboard/utilities/utils.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -107,13 +107,17 @@ class _DashboardState extends State<Dashboard> {
                   //Orders Tile
                   DashTile(
                     routeName: "/dashOrders",
-                    icon: orderIcon,
+                    icon: ordersIcon,
                     name: "ORDERS",
+                    color: Colors.green,
+                    bgCol: Colors.white,
                   ),
                   DashTile(
                     routeName: "/dashProducts",
-                    icon: Icons.fastfood,
+                    icon: productsIcon,
                     name: "PRODUCTS",
+                    color: Colors.blue,
+                    bgCol: Colors.white,
                   ),
                   // DashTile(
                   //   routeName: "/dashCarts",
@@ -122,18 +126,31 @@ class _DashboardState extends State<Dashboard> {
                   // ),
                   DashTile(
                     routeName: "/dashCategories",
-                    icon: Icons.category,
+                    icon: categoriesIcon,
                     name: "CATEGORIES",
+                    color: Colors.purple,
+                    bgCol: Colors.white,
+                  ),
+                  DashTile(
+                    routeName: "/dashCategories",
+                    icon: brandsIcon,
+                    name: "BRANDS",
+                    color: Colors.indigo,
+                    bgCol: Colors.white,
                   ),
                   DashTile(
                     routeName: "/dashCompletedOrder",
-                    icon: Icons.done_all,
+                    icon: completedIcon,
                     name: "COMPLETED ORDERS",
+                    color: Colors.teal,
+                    bgCol: Colors.white,
                   ),
                   DashTile(
                     routeName: "/dashProcessingOrder",
-                    icon: Icons.hourglass_empty,
+                    icon: processingIcon,
                     name: "PROCESSING ORDERS",
+                    color: Colors.yellow,
+                    bgCol: Colors.white,
                   ),
                 ],
               ),

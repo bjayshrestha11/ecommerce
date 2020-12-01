@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/components/cachedImage/cachedImage.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/models/category.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+import 'package:app_dashboard/components/cachedImage/cachedImage.dart';
+import 'package:app_dashboard/constants/colors.dart';
+import 'package:app_dashboard/models/category.dart';
+import 'package:app_dashboard/utilities/utils.dart';
 
 class DashCategoryTile extends StatelessWidget {
   final Category category;

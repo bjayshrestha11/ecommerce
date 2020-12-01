@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
+import 'colors.dart';
 
 
 //Google Icon
@@ -41,4 +41,17 @@ const IconData LOGOUT_ICON = FontAwesomeIcons.signOutAlt;
 const IconData COPYCLIPBOARD_ICON = Icons.content_copy;
 //Dashboard Icon
 const Icon dashboardIcon = Icon(Icons.dashboard, color: secondCol,);
+
+//Orders
+const IconData ordersIcon = Icons.assignment;
+//Products
+const IconData productsIcon = Icons.fastfood_outlined;
+//Categories
+const IconData categoriesIcon = Icons.category_outlined;
+//Completed Orders
+const IconData completedIcon = Icons.done_all;
+//Processing Orders
+const IconData processingIcon = Icons.hourglass_empty;
+//Brands
+const IconData brandsIcon = Icons.branding_watermark_outlined;
 

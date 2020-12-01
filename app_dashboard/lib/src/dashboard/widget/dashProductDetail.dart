@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/components/shimmering/myshimmer.dart';
-import 'package:foodly_dashboard/constants/colors.dart';
-import 'package:foodly_dashboard/constants/strings.dart';
-import 'package:foodly_dashboard/models/product.dart';
-import 'package:foodly_dashboard/utilities/utils.dart';
+import 'package:app_dashboard/components/shimmering/myshimmer.dart';
+import 'package:app_dashboard/constants/colors.dart';
+import 'package:app_dashboard/constants/strings.dart';
+import 'package:app_dashboard/models/product.dart';
+import 'package:app_dashboard/utilities/utils.dart';
 
 class DashProductDetail extends StatelessWidget {
   final Product product;

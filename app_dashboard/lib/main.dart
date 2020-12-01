@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_dashboard/src/dashboard/dashCarts.dart/dashCarts.dart';
-import 'package:foodly_dashboard/src/dashboard/dashCategories/dashCategories.dart';
-import 'package:foodly_dashboard/src/dashboard/dashOrders/dashCompletedOrder.dart';
-import 'package:foodly_dashboard/src/dashboard/dashOrders/dashOrders.dart';
-import 'package:foodly_dashboard/src/dashboard/dashOrders/dashProcessingOrder.dart';
-import 'package:foodly_dashboard/src/dashboard/dashProducts/dashProducts.dart';
-import 'package:foodly_dashboard/src/dashboard/dashboard.dart';
+import 'package:app_dashboard/src/dashboard/dashCarts.dart/dashCarts.dart';
+import 'package:app_dashboard/src/dashboard/dashCategories/dashCategories.dart';
+import 'package:app_dashboard/src/dashboard/dashOrders/dashCompletedOrder.dart';
+import 'package:app_dashboard/src/dashboard/dashOrders/dashOrders.dart';
+import 'package:app_dashboard/src/dashboard/dashOrders/dashProcessingOrder.dart';
+import 'package:app_dashboard/src/dashboard/dashProducts/dashProducts.dart';
+import 'package:app_dashboard/src/dashboard/dashboard.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 

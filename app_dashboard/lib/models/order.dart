@@ -1,6 +1,6 @@
 
 
-import 'package:foodly_dashboard/models/database_item.dart';
+import 'database_item.dart';
 
 class Order extends DatabaseItem {
   Order({
