@@ -88,8 +88,8 @@ class _EditProfileState extends State<EditProfile> {
     }
 
     return Scaffold(
-      backgroundColor: bgCol,
-      appBar: CustomAppBar(
+      // backgroundColor: bgCol,
+      appBar: AppBar(
         leading: IconButton(
           icon: backIcon,
           onPressed: () => Navigator.pop(context),
@@ -97,7 +97,7 @@ class _EditProfileState extends State<EditProfile> {
         centerTitle: true,
         title: Text(
           "Edit Profile",
-          style: appTitleStyle,
+          // style: appTitleStyle,
         ),
       ),
       body: SingleChildScrollView(
@@ -182,10 +182,10 @@ class _EditProfileState extends State<EditProfile> {
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.person),
                       labelText: "Full Name",
-                      labelStyle: TextStyle(color: Colors.black),
+                      // labelStyle: TextStyle(color: Colors.black),
                       hintText: widget.eUser.name,
                       filled: true,
-                      fillColor: Colors.white,
+                      // fillColor: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -204,12 +204,12 @@ class _EditProfileState extends State<EditProfile> {
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.phone),
                       labelText: "Phone Number",
-                      labelStyle: TextStyle(color: Colors.black),
+                      // labelStyle: TextStyle(color: Colors.black),
                       hintText: widget.eUser.phoneNumber.toString() == "null"
                           ? ""
                           : widget.eUser.phoneNumber.toString(),
                       filled: true,
-                      fillColor: Colors.white,
+                      // fillColor: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -226,10 +226,10 @@ class _EditProfileState extends State<EditProfile> {
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.location_city),
                       labelText: "Address",
-                      labelStyle: TextStyle(color: Colors.black),
+                      // labelStyle: TextStyle(color: Colors.black),
                       hintText: widget.eUser.address,
                       filled: true,
-                      fillColor: Colors.white,
+                      // fillColor: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -238,10 +238,10 @@ class _EditProfileState extends State<EditProfile> {
                   //Save Button
                   const SizedBox(height: 20.0),
                   RaisedButton(
-                    color: mainCol,
+                    // color: mainCol,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(40))),
-                    textColor: Colors.white,
+                    // textColor: Colors.white,
                     child:
                         !_saving ? Text("Save") : CircularProgressIndicator(),
                     onPressed: () async {

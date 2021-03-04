@@ -91,7 +91,7 @@ class _ProductDetailState extends State<ProductDetail> {
                 height: contHeight,
                 margin: EdgeInsets.only(bottom: 30),
                 decoration: BoxDecoration(
-                  color: mainCol,
+                  // color: mainCol,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(radius),
                     bottomRight: Radius.circular(radius),
@@ -127,7 +127,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   top: 40,
                   left: 10,
                   child: IconButton(
-                      color: Colors.white,
+                      // color: Colors.white,
                       icon: Icon(Icons.arrow_back),
                       onPressed: () => Navigator.pop(context)))
             ],
@@ -260,8 +260,8 @@ class _ProductDetailState extends State<ProductDetail> {
             child: MaterialButton(
                 height: 50.0,
                 minWidth: 60.0,
-                color: mainCol,
-                textColor: secondCol,
+                color: Theme.of(context).secondaryHeaderColor,
+                // textColor: secondCol,
                 child: Center(
                   child: Text(
                     "Add to Cart",

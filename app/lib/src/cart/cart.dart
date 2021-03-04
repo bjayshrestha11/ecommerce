@@ -61,7 +61,7 @@ class _CartState extends State<Cart> {
     //   context.read<CartProvider>().deleteCart();
     // }
     return Scaffold(
-      backgroundColor: bgCol,
+      // backgroundColor: bgCol,
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
@@ -260,9 +260,21 @@ class _CartState extends State<Cart> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  RaisedButton(
-                                    color: mainCol,
-                                    textColor: secondCol,
+                                  ElevatedButton(
+                                    style: ButtonStyle(
+                                      foregroundColor:
+                                          MaterialStateProperty.all(
+                                              Colors.green),
+                                      shape: MaterialStateProperty.all(
+                                        RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(40),
+                                              bottomLeft: Radius.circular(40)),
+                                        ),
+                                      ),
+                                    ),
+                                    // color: mainCol,
+                                    // textColor: secondCol,
                                     child: Padding(
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 18.0, horizontal: 32.0),
@@ -270,11 +282,6 @@ class _CartState extends State<Cart> {
                                         "Checkout",
                                         style: TextStyle(color: Colors.white),
                                       ),
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(40),
-                                          bottomLeft: Radius.circular(40)),
                                     ),
                                     onPressed: () async {
                                       if (_userID == null ||

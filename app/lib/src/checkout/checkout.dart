@@ -176,7 +176,7 @@ class _CheckoutState extends State<Checkout> {
                 ),
                 //Save Button
                 const SizedBox(height: 20.0),
-                RaisedButton(
+                ElevatedButton(
                   color: mainCol,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(40))),

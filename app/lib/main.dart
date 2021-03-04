@@ -1,3 +1,4 @@
+import 'package:app/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,6 +21,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => CartProvider()),
         ChangeNotifierProvider(create: (_) => UserRepository.instance()),
         ChangeNotifierProvider(create: (_) => ImageUploadProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeNotifier()),
       ],
       child: App(),
     ),
@@ -32,6 +34,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: "Ecommerce",
       debugShowCheckedModeBanner: false,
+      theme: context.watch<ThemeNotifier>().darkTheme ? dark : light,
       initialRoute: "/",
       routes: {
         "/": (_) => Home(),

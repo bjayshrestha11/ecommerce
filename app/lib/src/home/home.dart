@@ -106,26 +106,26 @@ class _HomeState extends State<Home> {
         physics: NeverScrollableScrollPhysics(),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: mainCol,
+        // backgroundColor: mainCol,
         currentIndex: _page,
         onTap: navigationTapped,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: secondCol,
-        unselectedItemColor: bgCol,
+        // selectedItemColor: secondCol,
+        // unselectedItemColor: bgCol,
         items: [
           BottomNavigationBarItem(
             icon: Icon(exploreIcon),
             label: "Explore",
-            backgroundColor: mainCol,
+            // backgroundColor: mainCol,
           ),
           BottomNavigationBarItem(
             icon: Icon(orderIcon),
             label: "Orders",
-            backgroundColor: mainCol,
+            // backgroundColor: mainCol,
           ),
           BottomNavigationBarItem(
             icon: Badge(
-              badgeColor: secondCol,
+              badgeColor: Theme.of(context).bottomAppBarColor,
               badgeContent: _userID == null
                   ? Text(
                       "0",
@@ -150,7 +150,7 @@ class _HomeState extends State<Home> {
               child: Icon(cartIcon),
             ),
             label: "Cart",
-            backgroundColor: mainCol,
+            // backgroundColor: mainCol,
           ),
         ],
       ),

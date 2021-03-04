@@ -26,7 +26,7 @@ class QuietBox extends StatelessWidget {
             //text
             text != null ? Text(text) : Text("Ooops Nothing Found"),
             //button
-            btnText != null ? RaisedButton(
+            btnText != null ? ElevatedButton(
               child: Text(btnText),
               onPressed: () {
                 Navigator.of(context).pushNamed(routeName);

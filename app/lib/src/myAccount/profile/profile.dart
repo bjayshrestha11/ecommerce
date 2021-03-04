@@ -1,3 +1,4 @@
+import 'package:app/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:app/components/appbar.dart';
 import 'package:app/components/cachedImage/cachedImage.dart';
@@ -19,7 +20,7 @@ class Profile extends StatelessWidget {
     String address = context.watch<UserRepository>().getUser.address;
     int contact = context.watch<UserRepository>().getUser.phoneNumber;
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: AppBar(
         leading: IconButton(
           icon: backIcon,
           onPressed: () {
@@ -28,11 +29,11 @@ class Profile extends StatelessWidget {
         ),
         title: Text(
           "Profile",
-          style: appTitleStyle,
+          // style: appTitleStyle,
         ),
         centerTitle: true,
       ),
-      backgroundColor: bgCol,
+      // backgroundColor: bgCol,
       body: Container(
         margin: EdgeInsets.only(top: 25),
         child: ListView(
@@ -47,7 +48,7 @@ class Profile extends StatelessWidget {
                           width: 100,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: mainCol,
+                            color: Theme.of(context).primaryColor,
                           ),
                           child: Stack(
                             children: [
@@ -70,13 +71,14 @@ class Profile extends StatelessWidget {
                                     height: 35,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: secondCol,
+                                      color: Theme.of(context).primaryColor,
                                     ),
                                     child: IconButton(
                                         icon: Icon(Icons.edit),
                                         tooltip: "CHANGE PROFILE",
                                         iconSize: 20,
-                                        color: Colors.white,
+                                        color:
+                                            Theme.of(context).backgroundColor,
                                         onPressed: () {
                                           Muser eUser = context
                                               .read<UserRepository>()
@@ -117,15 +119,42 @@ class Profile extends StatelessWidget {
                     address: address,
                     contact: contact,
                   ),
+                  SizedBox(height: 15),
+                  ListTile(
+                    tileColor: Theme.of(context).primaryColor,
+                    title: Text(
+                      "Edit Profile",
+                    ),
+                    onTap: () async {
+                      Muser eUser = context.read<UserRepository>().getUser;
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) {
+                        return EditProfile(
+                          eUser: eUser,
+                          // mode: 0,
+                        );
+                      }));
+                    },
+                  ),
+                  SizedBox(height: 15),
+                  SwitchListTile(
+                    tileColor: Theme.of(context).primaryColor,
+                    title: Text("Dark Mode"),
+                    onChanged: (val) {
+                      context.read<ThemeNotifier>().toggleTheme();
+                    },
+                    value: context.watch<ThemeNotifier>().darkTheme,
+                  ),
                   SizedBox(
                     height: 60.0,
                   ),
                   ListTile(
+                    tileColor: Theme.of(context).primaryColor,
                     leading: IconButton(
                       tooltip: "LOG OUT",
                       icon: Icon(
                         LOGOUT_ICON,
-                        // color: UniversalVariables.iconCol,
+                        // color: Theme.of(context).primaryColor,
                       ),
                       onPressed: () async {
                         if (await Utils.confirmBox(context, "Log Out",
@@ -136,9 +165,11 @@ class Profile extends StatelessWidget {
                     ),
                     title: Text(
                       "Log Out",
-                      // style: TextStyle(color: Colors.white),
+                      // style: TextStyle(
+                      //   color: Theme.of(context).primaryColor,
+                      // ),
                     ),
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    // contentPadding: EdgeInsets.only(left: 70.0),
                     onTap: () async {
                       if (await Utils.confirmBox(context, "Log Out",
                           "Do you really want to log out?")) {

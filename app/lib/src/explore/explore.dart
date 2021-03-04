@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../components/appbar.dart';
 import '../../constants/icons.dart';
 import 'widgets/allCategories.dart';
 import 'widgets/mySlider.dart';
@@ -63,10 +62,11 @@ class _ExploreState extends State<Explore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: AppBar(
         leading: Container(
+          margin: const EdgeInsets.all(5.0),
           decoration: BoxDecoration(
-            color: mainCol,
+            // color: mainCol,
             shape: BoxShape.circle,
           ),
           child: IconButton(
@@ -87,44 +87,31 @@ class _ExploreState extends State<Explore> {
             ),
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
-                    child: locationIcon,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      "Sagarmatha Colz",
-                      style: TextStyle(
-                          color: mainCol,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                ],
+              Text(
+                "Ai Ecommerce",
+                style: TextStyle(
+                    // color: mainCol,
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w600),
               ),
-              // Container(
-              //   alignment: Alignment.centerRight,
-              //   padding: const EdgeInsets.only(right: 8.0),
-              //   child: downArrowIcon,
-              // ),
             ],
           ),
         ),
         centerTitle: true,
         actions: [
-          UserCircle(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: UserCircle(),
+          ),
         ],
       ),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
             expandedHeight: 200,
-            backgroundColor: bgCol,
+            // backgroundColor: bgCol,
             flexibleSpace: FlexibleSpaceBar(
               background: MySlider(),
             ),
@@ -134,10 +121,6 @@ class _ExploreState extends State<Explore> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //search
-                  // showSearch ? SearchBar() : Container(),
-                  //slider
-                  // MySlider(),
                   //categories
                   Padding(
                     padding: const EdgeInsets.only(
@@ -146,7 +129,7 @@ class _ExploreState extends State<Explore> {
                       "Categories",
                       style: TextStyle(
                           fontSize: 25.0,
-                          color: mainCol,
+                          // color: mainCol,
                           fontWeight: FontWeight.w700),
                     ),
                   ),

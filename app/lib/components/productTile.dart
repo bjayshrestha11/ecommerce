@@ -2,17 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:app/components/productDetails.dart';
 import 'package:app/components/shimmering/myshimmer.dart';
-import 'package:app/constants/colors.dart';
-import 'package:app/constants/icons.dart';
 import 'package:app/constants/strings.dart';
 import 'package:app/models/product.dart';
 import 'package:app/providers/cartProvider.dart';
 import 'package:app/sharedPrefs/preferences.dart';
 import 'package:app/utilities/utils.dart';
 import 'package:provider/provider.dart';
-
-import '../constants/colors.dart';
-import '../constants/icons.dart';
 
 class ProductTile extends StatefulWidget {
   final Product product;
@@ -69,13 +64,13 @@ class _ProductTileState extends State<ProductTile> {
         padding: const EdgeInsets.symmetric(vertical: 9.0),
         child: Container(
           decoration: BoxDecoration(
-            color: bgCol,
+            // color: bgCol,
             boxShadow: [
               BoxShadow(
-                color: mainCol.withOpacity(0.06),
-                spreadRadius: 5,
-                blurRadius: 5,
-                offset: Offset(0, 3), // changes position of shadow
+                color: Theme.of(context).primaryColor,
+                // spreadRadius: 5,
+                // blurRadius: 5,
+                // offset: Offset(0, 3), // changes position of shadow
               ),
             ],
           ),
@@ -107,9 +102,10 @@ class _ProductTileState extends State<ProductTile> {
                       child: Text(
                         "${widget.product.name}",
                         style: TextStyle(
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.w600,
-                            color: secondCol),
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          // color: secondCol,
+                        ),
                       ),
                     ),
                     Padding(
@@ -118,7 +114,7 @@ class _ProductTileState extends State<ProductTile> {
                         "$currency${widget.product.salePrice}",
                         style: TextStyle(
                             fontSize: 14.0,
-                            color: mainCol,
+                            // color: mainCol,
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -128,7 +124,7 @@ class _ProductTileState extends State<ProductTile> {
               //Add to cart button
               Container(
                 decoration: BoxDecoration(
-                  color: secondCol,
+                  color: Theme.of(context).backgroundColor,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(5),
                       bottomRight: Radius.circular(5)),
@@ -137,7 +133,10 @@ class _ProductTileState extends State<ProductTile> {
                 height: hPT,
                 child: Center(
                   child: IconButton(
-                    icon: add_to_cart,
+                    icon: Icon(
+                      Icons.add_shopping_cart,
+                      color: Colors.white,
+                    ),
                     onPressed: () {
                       context
                           .read<CartProvider>()

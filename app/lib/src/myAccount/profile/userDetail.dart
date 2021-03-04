@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app/constants/colors.dart';
-import 'package:app/constants/styles.dart';
 import 'package:app/models/user.dart';
 import 'package:app/resources/userRepository.dart';
 import 'package:app/src/myAccount/profile/editProfile.dart';
@@ -18,7 +16,7 @@ class UserDetail extends StatelessWidget {
     return Container(
       // height: Utils.getHeightByPercentage(context, 16),
       padding: EdgeInsets.all(8),
-      color: mainCol,
+      color: Theme.of(context).primaryColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -35,21 +33,21 @@ class UserDetail extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     name != null?"Name: $name":"Name: Not Set",
-                    style: cartTextStyle,
+                    // style: cartTextStyle,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     address != null?"Address: $address":"Address: Not Set",
-                    style: cartTextStyle,
+                    // style: cartTextStyle,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     contact != null?"Contact: $contact":"Contact: Not Set",
-                    style: cartTextStyle,
+                    // style: cartTextStyle,
                   ),
                 ),
               ],
@@ -70,7 +68,7 @@ class UserDetail extends StatelessWidget {
               },
               child: Text(
                 "Edit",
-                style: TextStyle(color: secondCol),
+                // style: TextStyle(color: secondCol),
               ),
             ),
           ),

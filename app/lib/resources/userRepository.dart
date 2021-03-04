@@ -64,8 +64,7 @@ class UserRepository with ChangeNotifier {
 
   Future<Muser> getUserDetailsById(id) async {
     try {
-      DocumentSnapshot documentSnapshot =
-          await _userCollection.doc(id).get();
+      DocumentSnapshot documentSnapshot = await _userCollection.doc(id).get();
       return Muser.fromMap(documentSnapshot.data());
     } catch (e) {
       print(e);
@@ -249,13 +248,13 @@ class UserRepository with ChangeNotifier {
       _status = Status.Unauthenticated;
 
       Utils.saveToPrefereces(
-                name: null,
-                photo: null,
-                userId: null,
-                email: null,
-                phoneNumber: null,
-                address: null,
-              );
+        name: null,
+        photo: null,
+        userId: null,
+        email: null,
+        phoneNumber: null,
+        address: null,
+      );
       notifyListeners();
       return Future.delayed(Duration.zero);
     } catch (e) {
@@ -276,4 +275,15 @@ class UserRepository with ChangeNotifier {
     }
     notifyListeners();
   }
+
+  // void _saveToPref(Muser user) {
+  //   Utils.saveToPrefereces(
+  //     name: user.name,
+  //     photo: user.profilePhoto,
+  //     userId: user.uid,
+  //     email: user.email,
+  //     phoneNumber: user.phoneNumber,
+  //     address: user.address,
+  //   );
+  // }
 }
