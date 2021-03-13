@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bjayshrestha.flutcommerce">
+    package="com.example.flutcommerce">
    <application
         android:label="flutcommerce"
         android:icon="@mipmap/ic_launcher">
